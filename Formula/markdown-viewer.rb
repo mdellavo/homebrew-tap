@@ -10,23 +10,23 @@ class MarkdownViewer < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/mdellavo/markdown-viewer/releases/download/v0.1.0/markdown-viewer-aarch64-apple-darwin.tar.gz"
-      sha256 "bab87588ff632f6700dd9262356065f398868d1f5ddfc816a96aa3a47247bad2"
+      url "https://github.com/mdellavo/markdown-viewer/releases/download/v0.2.0/markdown-viewer-aarch64-apple-darwin.tar.gz"
+      sha256 "111ae153d877867122f48403191b05707d552e94e94953daafe6b582cc4964eb"
     end
     on_intel do
-      url "https://github.com/mdellavo/markdown-viewer/releases/download/v0.1.0/markdown-viewer-x86_64-apple-darwin.tar.gz"
-      sha256 "915650e01591ea0e3907fd77efd0e14ef74790979c3893c6b6c5de0ee1a0f651"
+      url "https://github.com/mdellavo/markdown-viewer/releases/download/v0.2.0/markdown-viewer-x86_64-apple-darwin.tar.gz"
+      sha256 "ebf173df2301c3b0e001122a2ebd758db6802c4179e52412fb64d791b47495b4"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/mdellavo/markdown-viewer/releases/download/v0.1.0/markdown-viewer-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "871e17fa068b588a0ebe2e16dcad8253e6b2457fad9d139f33d4dfbf5612a479"
+      url "https://github.com/mdellavo/markdown-viewer/releases/download/v0.2.0/markdown-viewer-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "9f88ecd2ba1708afb555ae611f6132d23c2df145983c8f6a61f891a338ad6be4"
     end
     on_intel do
-      url "https://github.com/mdellavo/markdown-viewer/releases/download/v0.1.0/markdown-viewer-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "c191d3bface6e41b893e930744ceb9d51f765305ef5fa3e6a9026f3e0504c899"
+      url "https://github.com/mdellavo/markdown-viewer/releases/download/v0.2.0/markdown-viewer-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "8e0959662c53cc6b962e2c2140b4250a64dd10022f150cc8c95d61505d797e2c"
     end
   end
 
@@ -36,6 +36,16 @@ class MarkdownViewer < Formula
     else
       bin.install "markdown-viewer"
     end
+  end
+
+  def caveats
+    <<~EOS
+      On macOS, to open Markdown files from Finder (Open With, double-click,
+      and a right-click Quick Action), run:
+        markdown-viewer --install-finder
+      Before uninstalling, remove it with:
+        markdown-viewer --uninstall-finder
+    EOS
   end
 
   test do
