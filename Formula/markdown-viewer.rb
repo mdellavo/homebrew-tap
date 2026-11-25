@@ -1,8 +1,12 @@
 class MarkdownViewer < Formula
   desc "Render a Markdown file with GitHub styling and live-reload it in your browser"
   homepage "https://github.com/mdellavo/markdown-viewer"
-  version "0.1.0"
   license "MIT"
+
+  head do
+    url "https://github.com/mdellavo/markdown-viewer.git", branch: "main"
+    depends_on "rust" => :build
+  end
 
   on_macos do
     on_arm do
@@ -24,11 +28,6 @@ class MarkdownViewer < Formula
       url "https://github.com/mdellavo/markdown-viewer/releases/download/v0.1.0/markdown-viewer-x86_64-unknown-linux-gnu.tar.gz"
       sha256 "c191d3bface6e41b893e930744ceb9d51f765305ef5fa3e6a9026f3e0504c899"
     end
-  end
-
-  head do
-    url "https://github.com/mdellavo/markdown-viewer.git", branch: "main"
-    depends_on "rust" => :build
   end
 
   def install
