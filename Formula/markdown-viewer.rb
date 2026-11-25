@@ -10,23 +10,23 @@ class MarkdownViewer < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/mdellavo/markdown-viewer/releases/download/v0.4.0/markdown-viewer-aarch64-apple-darwin.tar.gz"
-      sha256 "e2688610f97e9560c64b07b8bd7edbfd65b56898e9fe6cbae6076e23874a70e1"
+      url "https://github.com/mdellavo/markdown-viewer/releases/download/v0.5.0/markdown-viewer-aarch64-apple-darwin.tar.gz"
+      sha256 "862e74e861d244298c7f0c8f7ad6517552e8b6a23d74b6f363ff5a28bc9fb308"
     end
     on_intel do
-      url "https://github.com/mdellavo/markdown-viewer/releases/download/v0.4.0/markdown-viewer-x86_64-apple-darwin.tar.gz"
-      sha256 "54111829309115ebd5b14865f0391e756e4c76a107e67340d8cfc254ffda1cd4"
+      url "https://github.com/mdellavo/markdown-viewer/releases/download/v0.5.0/markdown-viewer-x86_64-apple-darwin.tar.gz"
+      sha256 "c8f13960f36b38b6deb7d234a80c7502bd6272c59b30fa52932455a9a9e2c29f"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/mdellavo/markdown-viewer/releases/download/v0.4.0/markdown-viewer-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "e910bae11c23682a8ea7198aed6446b390ae59ffe88e066c985380619c05729f"
+      url "https://github.com/mdellavo/markdown-viewer/releases/download/v0.5.0/markdown-viewer-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "59ecf81b8ecac3a7e1dfa60ac060c19e65137714393c175b1643ac302106f727"
     end
     on_intel do
-      url "https://github.com/mdellavo/markdown-viewer/releases/download/v0.4.0/markdown-viewer-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "40310d560093c93cb0cb8be4c45dc3884a5d4aea335a335ce9f2043bd7415baf"
+      url "https://github.com/mdellavo/markdown-viewer/releases/download/v0.5.0/markdown-viewer-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "4589494a04fa87688e824deb0aa49b70bafe00e0f2786d62fa4aaa17b6e628fb"
     end
   end
 
