@@ -10,23 +10,23 @@ class MarkdownViewer < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/mdellavo/markdown-viewer/releases/download/v0.3.0/markdown-viewer-aarch64-apple-darwin.tar.gz"
-      sha256 "aaa9e55b58be92fdabfe689b1e39030e6789d15d97ac174990f06bdb35d6e76f"
+      url "https://github.com/mdellavo/markdown-viewer/releases/download/v0.4.0/markdown-viewer-aarch64-apple-darwin.tar.gz"
+      sha256 "e2688610f97e9560c64b07b8bd7edbfd65b56898e9fe6cbae6076e23874a70e1"
     end
     on_intel do
-      url "https://github.com/mdellavo/markdown-viewer/releases/download/v0.3.0/markdown-viewer-x86_64-apple-darwin.tar.gz"
-      sha256 "c3b1a4ff5f413fdb1d2de27783b74c8d965804d9a1fd18e0480752721519324a"
+      url "https://github.com/mdellavo/markdown-viewer/releases/download/v0.4.0/markdown-viewer-x86_64-apple-darwin.tar.gz"
+      sha256 "54111829309115ebd5b14865f0391e756e4c76a107e67340d8cfc254ffda1cd4"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/mdellavo/markdown-viewer/releases/download/v0.3.0/markdown-viewer-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "c104fd4eca9c972f040c15998d8eb3cadf1a4da82a6e3e98e5d22d5bba5a4ad5"
+      url "https://github.com/mdellavo/markdown-viewer/releases/download/v0.4.0/markdown-viewer-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "e910bae11c23682a8ea7198aed6446b390ae59ffe88e066c985380619c05729f"
     end
     on_intel do
-      url "https://github.com/mdellavo/markdown-viewer/releases/download/v0.3.0/markdown-viewer-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "b14d5caadac98379008367cd6c89c80dfcea5c84804d8e9076b528c60dd486c7"
+      url "https://github.com/mdellavo/markdown-viewer/releases/download/v0.4.0/markdown-viewer-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "40310d560093c93cb0cb8be4c45dc3884a5d4aea335a335ce9f2043bd7415baf"
     end
   end
 
@@ -36,6 +36,10 @@ class MarkdownViewer < Formula
     else
       bin.install "markdown-viewer"
     end
+    bash_completion.install "completions/markdown-viewer.bash" => "markdown-viewer"
+    zsh_completion.install "completions/_markdown-viewer"
+    fish_completion.install "completions/markdown-viewer.fish"
+    man1.install "man/markdown-viewer.1"
   end
 
   def caveats
